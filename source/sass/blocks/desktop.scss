@@ -41,6 +41,11 @@ a {
     left: 50%;
     transform: translateX(-50%);
   }
+  @media (max-width: $tablet-width) {
+    position: relative;
+    left: unset;
+    transform: unset;
+  }
 }
 .btn:hover {
 	box-shadow: 0 4px 30px rgba(0, 0, 0, .3)
@@ -57,7 +62,7 @@ a {
     max-width: 768px;
   }
   @media (max-width: $tablet-width) {
-    max-width: 320px;
+    min-width: 290px;
   }
 }
 .divider {
@@ -72,7 +77,12 @@ a {
 }
 .title {
 	font-size: 36px;
-	font-weight: 400
+	font-weight: 400;
+
+  @media (max-width: $tablet-width) {
+    font-size: 24px;
+    text-align: center;
+  }
 }
 .header {
   display: flex;
@@ -214,7 +224,7 @@ a {
 	box-shadow: 0 4px 30px rgba(0, 0, 0, .25);
 
   @media (max-width: $desktop) {
-    max-width: 1200px;
+    max-width: 1024px;
     flex-direction: column;
   }
 
@@ -307,18 +317,26 @@ a {
   }
 }
 .tabheader__item {
-	font-weight: 700;
 	font-size: 18px;
 	font-weight: 300;
 	margin-top: 10px;
 	color: rgba(0, 0, 0, .6);
 	cursor: pointer;
-	transition: .3s all
+	transition: .3s all;
+
+  @media (max-width: $tablet-width) {
+    font-size: 16px;
+    margin-right: 15px;
+  }
 }
 .tabheader__item_active {
 	color: #000;
 	font-size: 22px;
-	font-weight: 700
+	font-weight: 700;
+
+  @media (max-width: $tablet-width) {
+    font-size: 18px;
+  }
 }
 .offer {
 	padding: 70px 0 100px 0;
@@ -326,6 +344,11 @@ a {
 
   @media (max-width: $desktop-width) {
     padding-bottom: 60px;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding: 20px 0;
+
   }
 }
 .offer .container {
@@ -374,7 +397,11 @@ a {
 	font-size: 18px;
 	margin-top: 30px;
 	font-weight: 300;
-	line-height: 24px
+	line-height: 24px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 30px;
+  }
 }
 .offer__action {
 	display: flex;
@@ -476,7 +503,11 @@ a {
 	padding: 50px 0
 }
 .calculating .title {
-	text-align: center
+	text-align: center;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 20px;
+  }
 }
 .calculating__field {
 	width: 100%;
@@ -548,6 +579,10 @@ a {
     max-width: 80%;
     margin: 0 auto;
   }
+
+  @media (max-width: $tablet-width) {
+    justify-content: center;
+  }
 }
 .calculating__choose_big {
 	width: 930px;
@@ -557,6 +592,7 @@ a {
   @media (max-width: $desktop-width) {
     max-width: 60%;
     margin: 0 auto;
+    justify-content: center;
   }
 }
 .calculating__choose_big .calculating__choose-item {
@@ -566,14 +602,24 @@ a {
 	width: 490px;
 	height: 1px;
 	margin: 40px auto;
-	background-color: rgba(0, 0, 0, .2)
+	background-color: rgba(0, 0, 0, .2);
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+  }
 }
 .calculating__total {
 	width: 490px;
 	margin: 0 auto;
 	display: flex;
 	justify-content: space-between;
-	align-items: center
+	align-items: center;
+
+  @media (max-width: $tablet-width) {
+    width: 290px;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
 }
 .calculating__result {
 	font-size: 18px;
@@ -654,6 +700,7 @@ a {
 	margin-top: 70px;
 	padding: 0 100px;
 	display: flex;
+  flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
 
@@ -662,6 +709,13 @@ a {
     min-height: 150px;
     margin-top: 40px;
     align-items: flex-start;
+  }
+
+  @media (max-width: $tablet-width) {
+    min-height: 180px;
+    flex-direction: column;
+    padding: 0 20px;
+    align-items: center;
   }
 }
 .order__form img {
@@ -680,7 +734,7 @@ a {
 	font-size: 18px;
 	text-align: center;
 	padding: 0 20px;
-	outline: 0
+	outline: 0;
 }
 .promotion {
 	padding: 70px 0 240px 0;
@@ -766,13 +820,24 @@ a {
   @media (max-width: $desktop) {
     margin-left: 25px;
   }
+
+  @media (max-width: $tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
 }
 .promotion__timer .timer__block span {
 	display: block;
 	margin-top: 20px;
 	margin-bottom: 5px;
 	font-size: 56px;
-	font-weight: 700
+	font-weight: 700;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 15px;
+    font-size: 18px;
+    text-align: center;
+  }
 }
 .footer {
 	min-height: 180px;
@@ -792,13 +857,22 @@ a {
   }
 }
 .footer .subtitle {
-	font-size: 20px
+	font-size: 20px;
+
+  @media (max-width: $tablet-width) {
+    font-size: 14px;
+    width: 99%;
+  }
 }
 .footer .link {
 	display: block;
 	margin-top: 15px;
 	font-size: 16px;
-	color: #fff
+	color: #fff;
+
+  @media (max-width: $tablet-width) {
+    font-size: 14px;
+  }
 }
 .footer .call {
 	text-align: right
@@ -873,6 +947,11 @@ a {
 	animation-name: fade;
 	animation-duration: 1.5s
 }
+.pepper {
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
 @keyframes fade {
 	from {
 		opacity: 0.1
@@ -881,3 +960,4 @@ a {
 		opacity: 1
 	}
 }
+
