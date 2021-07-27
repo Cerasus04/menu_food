@@ -21,7 +21,7 @@ const styles = () => {
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("source/css"))
     .pipe(sync.stream());
-}
+};
 
 exports.styles = styles;
 
@@ -37,7 +37,7 @@ const server = (done) => {
     ui: false,
   });
   done();
-}
+};
 
 exports.server = server;
 
@@ -46,7 +46,7 @@ exports.server = server;
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
   gulp.watch("source/*.html").on("change", sync.reload);
-}
+};
 
 function deploy(cb) {
   ghPages.publish(path.join(process.cwd(), './source'), cb);
